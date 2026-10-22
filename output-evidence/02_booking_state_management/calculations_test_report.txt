@@ -1,0 +1,31 @@
+================================================================
+🧮 PHASE 4 / EXPERIMENT 2: FINANCIAL & DATE CALCULATIONS TESTS
+================================================================
+
+  ✓ PASS: Same-month stay (10-13 Nov) is exactly 3 nights 
+  ✓ PASS: Room cost is ₹25,500 (8500 * 3) 
+  ✓ PASS: 12% GST is ₹3,060 (25500 * 0.12) 
+  ✓ PASS: Resort fee is ₹500 
+  ✓ PASS: Final total is ₹29,060 (25500 + 3060 + 500) 
+  ✓ PASS: Cross-month boundary (28 Nov to 3 Dec) is exactly 5 nights 
+  ✓ PASS: Suite cost is ₹60,000 (12000 * 5) 
+  ✓ PASS: 12% GST on ₹60,000 is ₹7,200 
+  ✓ PASS: Final total is ₹67,700 (60000 + 7200 + 500) 
+  ✓ PASS: Cross-year boundary (30 Dec 2026 to 3 Jan 2027) is exactly 4 nights 
+  ✓ PASS: Room cost is ₹34,000 (8500 * 4) 
+  ✓ PASS: 12% GST is ₹4,080 
+  ✓ PASS: Final total is ₹38,580 
+  ✓ PASS: Feb to Mar boundary (26 Feb to 2 Mar 2027) is 4 nights 
+  ✓ PASS: Check-out before Check-in yields 0 nights and error 
+  ✓ PASS: Invalid date range results in ₹0 total amount 
+  ✓ PASS: Same-day check-in and check-out yields 0 nights 
+  ✓ PASS: Zero-night stay results in ₹0 total 
+  ✓ PASS: Empty inputs cleanly return 0 values without throwing 
+  ✓ PASS: Odd room cost is exact integer (7777 * 3 = 23331) 
+  ✓ PASS: Taxes are rounded integer without floating point decimals 
+  ✓ PASS: Total amount is rounded integer 
+
+================================================================
+📊 CALCULATION TESTS SUMMARY: 22 PASSED, 0 FAILED
+================================================================
+

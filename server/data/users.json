@@ -1,0 +1,12 @@
+[
+  {
+    "id": "usr-369805",
+    "name": "Eleanor Vance",
+    "email": "eleanor.vance@example.com",
+    "phone": "9876543210",
+    "role": "guest",
+    "passwordHash": "0559b834afa89114e5764c61fc124630:3ee34329fbbabf509a3f9f2f6a9a9a6d0014c59cf931b60c57e888006f93903f265031b1d565ea94615da77579f36d30b6dd39e7e16f711692d73ab16a42a49a",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    "createdAt": "2026-10-22T05:41:38.991Z"
+  }
+]

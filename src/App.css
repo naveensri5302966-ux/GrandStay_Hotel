@@ -1,0 +1,9 @@
+/* Grand Stay - Theme Global Overrides */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8FBFF;
+  color: #0F2942;
+}

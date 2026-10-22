@@ -1,0 +1,54 @@
+================================================================
+🛡️  PHASE 2: API AUTHENTICATION & SECURITY TEST SUITE
+================================================================
+
+Test 1: Login with valid credentials (Eleanor Vance)
+  ✓ PASS: Valid login returns 200 OK 
+  ✓ PASS: Signed JWT token returned 
+  ✓ PASS: Second user (John Doe) valid login returns 200 OK 
+
+Test 2: Login with incorrect password
+  ✓ PASS: Incorrect password returns 401 Unauthorized (Status: 401)
+  ✓ PASS: Clear error message for invalid password 
+  ✓ PASS: Unknown user returns 401 Unauthorized 
+
+Test 2b: Login rate limiting and brute force lockout
+  ✓ PASS: Rate limiter triggers 429 Too Many Requests after 5 consecutive failures 
+  ✓ PASS: Rate limiter response includes Retry-After header 
+
+Test 3: Access reservation history without a token
+  ✓ PASS: GET /reservations without token returns 401 Unauthorized (Status: 401)
+
+Test 4: Create a reservation without a token
+  ✓ PASS: POST /reservations without token returns 401 Unauthorized (Status: 401)
+
+Test 5: Update and delete a reservation without a token
+  ✓ PASS: PUT /reservations/:id without token returns 401 Unauthorized (Status: 401)
+  ✓ PASS: DELETE /reservations/:id without token returns 401 Unauthorized (Status: 401)
+
+Test 6: Use an expired or tampered token
+  ✓ PASS: Tampered JWT token returns 401 Unauthorized (Status: 401)
+  ✓ PASS: Malformed token returns 401 Unauthorized (Status: 401)
+  ✓ PASS: Genuinely expired JWT token returns 401 Unauthorized (Status: 401)
+  ✓ PASS: Expired token response indicates TOKEN_EXPIRED code 
+
+Test 7: Attempt to access another user's reservation (Multi-tenant security)
+  ✓ PASS: Eleanor attempting to read John Doe's reservation returns 403 Forbidden (Status: 403)
+  ✓ PASS: Eleanor attempting to update John Doe's reservation returns 403 Forbidden (Status: 403)
+  ✓ PASS: Eleanor attempting to delete John Doe's reservation returns 403 Forbidden (Status: 403)
+
+Test 8: Permitted operations with valid authenticated session
+  ✓ PASS: Eleanor gets 200 OK for her own reservation history 
+  ✓ PASS: Eleanor sees only her reservations 
+  ✓ PASS: Eleanor can read her own reservation RES-2026-512948 (200 OK) 
+  ✓ PASS: Eleanor can create valid reservation (201 Created) (Created #RES-2026-369290)
+  ✓ PASS: Eleanor can update her own reservation (200 OK) 
+
+Test 9: Double-booking & Overlapping Date Collision Prevention
+  ✓ PASS: Conflicting booking on overlapping dates returns 409 Conflict (Status: 409)
+  ✓ PASS: Eleanor can cancel her own reservation (200 OK) 
+
+================================================================
+📊 SECURITY TEST SUMMARY: 26 PASSED, 0 FAILED
+================================================================
+

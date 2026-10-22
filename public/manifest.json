@@ -1,0 +1,17 @@
+{
+  "short_name": "GrandStay",
+  "name": "Grand Stay Travel & Tour Booking App",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F8FBFF",
+  "theme_color": "#2F7FC1",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "description": "Travel and Tour Booking Web Application with offline capabilities, package management, and accessible booking controls."
+}
